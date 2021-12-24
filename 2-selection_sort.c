@@ -1,5 +1,21 @@
 #include "sort.h"
 /**
+ * swap - swaps two variables
+ * @i: first one to swap
+ * @j: second one to swap
+ */
+
+void swap(int *i, int *j)
+{
+	int tmp = *i;
+
+	*i = *j;
+	*j = tmp;
+}
+
+
+
+/**
  * selection_sort - sort array of int ascending order using selection algorithm
  * @array: array to sort
  * @size: size of the array
@@ -7,8 +23,7 @@
 void selection_sort(int *array, size_t size)
 {
 	unsigned int i, j, idx;
-	int tmp, min;
-	int flag = 0;
+	int min, flag = 0;
 
 	if (array == NULL)
 		return;
@@ -25,9 +40,7 @@ void selection_sort(int *array, size_t size)
 			}
 			if ((flag == 1) && (j == size - 1))
 			{
-				tmp = array[idx];
-				array[idx] = array[i];
-				array[i] = tmp;
+				swap(&array[idx], &array[i]);
 				print_array(array, size);
 			}
 		}
