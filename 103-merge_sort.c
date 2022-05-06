@@ -66,7 +66,7 @@ void recursive_merg_sort(int *array, int *temp, int left, int right)
 
 
 /**
- * merg_sort - merge sort algo
+ * merge_sort - merge sort algo
  * @array: array to be sorted
  * @size: size of the array to be sorted
  * Return: void
