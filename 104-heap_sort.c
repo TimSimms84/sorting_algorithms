@@ -9,5 +9,5 @@
 void heap_sort(__attribute__ ((unused)) int *array, size_t size)
 {
 	size = 0;
-	printf("%i", size);
+	printf("%li", size);
 }
