@@ -51,17 +51,14 @@ void countSort(int *arr, int size, int exp)
 {
 	int *count, *output, i;
 
-	count = _calloc(sizeof(int) * 10);
+	count = _calloc(10);
 	if (!count)
 		return;
 
 	for (i = 0; i < size; i++)
 		count[(arr[i] / exp) % 10]++;
-
 	for (i = 1; i < 10; i++)
-	{
 		count[i] = count[i] + count[i - 1];
-	}
 	output = malloc(sizeof(int) * (size));
 	if (!output)
 		return;
@@ -70,7 +67,6 @@ void countSort(int *arr, int size, int exp)
 		output[count[(arr[i] / exp) % 10] - 1] = arr[i];
 		count[(arr[i] / exp) % 10]--;
 	}
-
 	for (i = 0; i < size; i++)
 		arr[i] = output[i];
 	free(output);
