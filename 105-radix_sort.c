@@ -86,10 +86,12 @@ void countSort(int *arr, int size, int exp)
 void radix_sort(int *array, size_t size)
 {
 
-	int exp, max = get_max(array, size);
+	int exp, max;
 
 	if (!array || size < 2)
 		return;
+
+	max = get_max(array, size);
 
 	for (exp = 1; max / exp > 0; exp *= 10)
 	{
