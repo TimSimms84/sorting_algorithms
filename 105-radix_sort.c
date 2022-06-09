@@ -62,7 +62,7 @@ void countSort(int *arr, int size, int exp)
 	{
 		count[i] = count[i] + count[i - 1];
 	}
-	output = malloc(sizeof(int) * (10));
+	output = malloc(sizeof(int) * (size));
 	if (!output)
 		return;
 	for (i = size - 1; i >= 0; i--)
