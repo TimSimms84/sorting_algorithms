@@ -20,6 +20,11 @@ int get_max(int *array, int size)
 	return (max);
 }
 
+/**
+ * _calloc - malloc and fill an array
+ * @n: size of array
+ * Return: pointer to array
+ */
 int *_calloc(int n)
 {
 	int j;
@@ -80,7 +85,7 @@ void countSort(int *arr, int size, int exp)
  */
 void radix_sort(int *array, size_t size)
 {
-	
+
 	int exp, max = get_max(array, size);
 
 	if (!array || size < 2)
